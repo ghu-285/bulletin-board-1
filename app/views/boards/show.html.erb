@@ -35,7 +35,7 @@
 
     <input type="hidden" id="board_id_box" name="query_board_id" value="<%= @the_board.id %>">
 
-    <button>
+    <button type="submit">
       Add post
     </button>
   </form>
@@ -54,10 +54,10 @@
 
   <% @active_posts.each do |p| %>
     <tr>
-      <td>p.title</td>
-      <td>p.body</td>
-      <td>p.created_at</td>
-      <td>p.expires_on</td>
+      <td><%=p.title %></td>
+      <td><%= p.body %></td>
+      <td><%= p.created_at %></td>
+      <td><%= p.expires_on %></td>
     </tr>
   <% end %>
 
@@ -75,10 +75,10 @@
 
   <% @expired_posts.each do |p| %>
     <tr>
-      <td>p.title</td>
-      <td>p.body</td>
-      <td>p.created_at</td>
-      <td>p.expires_on</td>
+      <td><%= p.title %></td>
+      <td><%= p.body %></td>
+      <td><%= p.created_at %></td>
+      <td><%= p.expires_on %></td>
     </tr>
   <% end %>
 </table>

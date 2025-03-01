@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  # # Routes for the Post resource:
+  # Routes for the Post resource:
 
-  # # CREATE
-  # post("/insert_post", { :controller => "posts", :action => "create" })
+  # CREATE
+  post("/insert_post", { :controller => "posts", :action => "create" })
           
-  # # READ
-  # get("/posts", { :controller => "posts", :action => "index" })
+  # READ
+  get("/posts", { :controller => "posts", :action => "index" })
   
-  # get("/posts/:path_id", { :controller => "posts", :action => "show" })
+  get("/posts/:path_id", { :controller => "posts", :action => "show" })
   
-  # # UPDATE
+  # UPDATE
   
-  # post("/modify_post/:path_id", { :controller => "posts", :action => "update" })
+  post("/modify_post/:path_id", { :controller => "posts", :action => "update" })
   
-  # # DELETE
-  # get("/delete_post/:path_id", { :controller => "posts", :action => "destroy" })
+  # DELETE
+  get("/delete_post/:path_id", { :controller => "posts", :action => "destroy" })
 
   #------------------------------
 

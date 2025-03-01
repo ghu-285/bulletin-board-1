@@ -17,8 +17,8 @@ class BoardsController < ApplicationController
     @active_posts = Post.where({:board_id => the_id}).where("expires_on >= ?", Time.now)
 
     @expired_posts = Post.where({:board_id => the_id}).where("expires_on < ?", Time.now)
-    
-    redirect_to("/boards/#{the_id}")
+
+    render({ template: "boards/show" })
   end
 
   def create
