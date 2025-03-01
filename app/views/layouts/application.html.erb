@@ -10,7 +10,23 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <% if notice.present? %>
+    <div>
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert.present? %>
+    <div>
+      <%= alert %>
+    </div>
+  <% end %>
+  
   <body>
+    <a href="/">Bulletin Board</a>
+
+    <hr>
+
     <%= yield %>
   </body>
 </html>
